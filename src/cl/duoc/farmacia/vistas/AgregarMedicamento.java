@@ -4,6 +4,10 @@
  */
 package cl.duoc.farmacia.vistas;
 
+import cl.duoc.farmacia.control.MedicamentoControl;
+import javax.swing.JOptionPane;
+import javax.swing.plaf.OptionPaneUI;
+
 /**
  *
  * @author jorge.saavedra
@@ -28,22 +32,167 @@ public class AgregarMedicamento extends javax.swing.JPanel {
 
         bg_panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txt_precio = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        txt_tipo = new javax.swing.JTextField();
+        txt_nombre = new javax.swing.JTextField();
+        txt_lab = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        btn_limpiar = new javax.swing.JButton();
+        btn_crear1 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bg_panel.setBackground(new java.awt.Color(255, 255, 255));
+        bg_panel.setBackground(new java.awt.Color(204, 255, 204));
         bg_panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
         jLabel1.setText("Agregar Medicamento");
-        bg_panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        bg_panel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+
+        jLabel5.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel5.setText("Precio");
+        bg_panel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, -1, -1));
+
+        txt_precio.setBackground(new java.awt.Color(204, 204, 204));
+        txt_precio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_precioActionPerformed(evt);
+            }
+        });
+        bg_panel.add(txt_precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 160, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel3.setText("Nombre");
+        bg_panel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel4.setText("Laboratorio");
+        bg_panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
+
+        txt_tipo.setBackground(new java.awt.Color(204, 204, 204));
+        bg_panel.add(txt_tipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 160, -1));
+
+        txt_nombre.setBackground(new java.awt.Color(204, 204, 204));
+        txt_nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_nombreActionPerformed(evt);
+            }
+        });
+        bg_panel.add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 160, -1));
+
+        txt_lab.setBackground(new java.awt.Color(204, 204, 204));
+        txt_lab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_labActionPerformed(evt);
+            }
+        });
+        bg_panel.add(txt_lab, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 160, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel6.setText("Tipo");
+        bg_panel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
+
+        btn_limpiar.setText("Limpiar");
+        btn_limpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_limpiarActionPerformed(evt);
+            }
+        });
+        bg_panel.add(btn_limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, -1, -1));
+
+        btn_crear1.setText("Crear");
+        btn_crear1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_crear1ActionPerformed(evt);
+            }
+        });
+        bg_panel.add(btn_crear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, -1, -1));
 
         add(bg_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 480));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txt_nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_nombreActionPerformed
+
+    private void btn_limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_limpiarActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_btn_limpiarActionPerformed
+
+    private void txt_labActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_labActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_labActionPerformed
+
+    private void txt_precioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_precioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_precioActionPerformed
+
+    private void btn_crear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_crear1ActionPerformed
+        MedicamentoControl control = new MedicamentoControl();
+
+        String varNombre = txt_nombre.getText().trim();
+        String varLaboratorio = txt_lab.getText().trim();
+        String varTipo = txt_tipo.getText().trim();
+        int varPrecio;
+        System.out.println("Nombre: "+ varNombre);
+        if (varNombre.equals("") || varNombre.length() > 250 || varNombre.isBlank() || varNombre.isEmpty()) {
+            String mensaje ="El nombre debe contener entre 1 y 250 caractéres.";
+            Alerta.mostrarDialogo(bg_panel, mensaje, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (varLaboratorio.equals("") || varLaboratorio.length() > 250 || varLaboratorio.isBlank() || varLaboratorio.isEmpty()) {
+            //MostrarError("El laboratorio supera el limite de 250 caracteres.");
+            String mensaje = "El laboratorio debe contener entre 1 y 250 caractéres.";
+            Alerta.mostrarDialogo(bg_panel,mensaje , "Error", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (varTipo.equals("") || varTipo.length() > 30 || varTipo.isBlank() || varTipo.isEmpty()) {
+            //MostrarError("El laboratorio supera el limite de 250 caracteres.");
+            String mensaje = "El laboratorio debe contener entre 1 y 30 caractéres.";
+            Alerta.mostrarDialogo(bg_panel, mensaje, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        try {
+            varPrecio = Integer.parseInt(txt_precio.getText().trim());
+            System.out.println("Inicio accion boton");
+        } catch (Exception e) {
+            String mensaje = "Solo se permiten valores numericos.";
+            Alerta.mostrarDialogo(bg_panel, mensaje, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        if (varPrecio <= 0) {
+            //MostrarError();
+            String mensaje = "El precio no puede ser menor o igual a 0";
+            Alerta.mostrarDialogo(bg_panel, mensaje, "Error", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        control.crearMedicamento(varNombre, varLaboratorio, varTipo, varPrecio);
+    }//GEN-LAST:event_btn_crear1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg_panel;
+    private javax.swing.JButton btn_crear1;
+    private javax.swing.JButton btn_limpiar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField txt_lab;
+    private javax.swing.JTextField txt_nombre;
+    private javax.swing.JTextField txt_precio;
+    private javax.swing.JTextField txt_tipo;
     // End of variables declaration//GEN-END:variables
 }
